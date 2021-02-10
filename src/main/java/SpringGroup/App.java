@@ -14,9 +14,14 @@ public class App
     		"appContext.xml"
     	);
     	
-    	TestBean tb=context.getBean("testBean",TestBean.class);
+    	Music mb=context.getBean("musicBean",Music.class);
     	
-        System.out.println(tb.getName());
+    	//ручное внедрение зависимости
+    	MusicPlayer mp=new MusicPlayer(mb);
+    	
+    	mp.playMusic();
+    	
+        //System.out.println(tb.getSong());
         
         context.close();
     }
