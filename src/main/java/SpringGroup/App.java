@@ -14,11 +14,11 @@ public class App
     		"appContext.xml"
     	);
     	
-    	Music mb=context.getBean("musicBean",Music.class);
+    	//Music mb=context.getBean("musicBean",Music.class);
     	
     	//ручное внедрение зависимости
-    	MusicPlayer mp=new MusicPlayer(mb);
-    	
+    	//MusicPlayer mp=new MusicPlayer(mb);
+    	MusicPlayer mp=context.getBean("musicPlayer",MusicPlayer.class);
     	mp.playMusic();
     	
         //System.out.println(tb.getSong());

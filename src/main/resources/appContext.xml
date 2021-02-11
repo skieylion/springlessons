@@ -10,5 +10,7 @@
     <bean id="musicBean"
         class="SpringGroup.ClassicalMusic">
     </bean>
-
+	<bean id="musicPlayer" class="SpringGroup.MusicPlayer">
+		<constructor-arg ref="musicBean" />
+    </bean>
 </beans>
