@@ -24,5 +24,11 @@ public class App
         //System.out.println(tb.getSong());
         
         context.close();
+        
+        /*
+         * упражнение на следующий урок
+         * https://youtu.be/dBxRmUH3Af8?list=PLAma_mKffTOR5o0WNHnY0mTjKxnCgSXrZ&t=1076
+         * */
+        
     }
 }
