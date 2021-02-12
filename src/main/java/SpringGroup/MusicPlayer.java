@@ -1,6 +1,40 @@
 package SpringGroup;
 
+import java.util.List;
+
+import com.sun.corba.se.spi.orbutil.fsm.Action;
+
 public class MusicPlayer {
+	
+	private List<String> listMusicStr;
+	
+	public List<String> getListMusicStr() {
+		
+		System.out.println("get listStr: "+listMusicStr);
+		return listMusicStr;
+	}
+
+	public void setListMusicStr(List<String> listMusicStr) {
+		this.listMusicStr = listMusicStr;
+	}
+
+	private List<Music> listMusic;
+	
+	public List<Music> getListMusic() {
+		System.out.println("------------");
+		for (int index=0; index < listMusic.size(); index++) {
+			System.out.println(listMusic.get(index).getSong());
+        }
+		System.out.println("------------");
+		System.out.println("get list: "+listMusic);
+		return listMusic;
+	}
+
+	public void setListMusic(List<Music> listMusic) {
+		System.out.println("set list: "+listMusic);
+		this.listMusic = listMusic;
+	}
+
 	private Music music;
 	private Integer volume;
 	

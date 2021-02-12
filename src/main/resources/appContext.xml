@@ -12,9 +12,25 @@
     <bean id="musicBean"
         class="SpringGroup.RockMusic">
     </bean>
+    <bean id="musicBean2"
+        class="SpringGroup.ClassicalMusic">
+    </bean>
 	<bean id="musicPlayer" class="SpringGroup.MusicPlayer">
 		<property name="music" ref="musicBean"  />
 		<property name="volume" value="${musicPlayer.volume}"  />
 		<property name="name" value="${musicPlayer.name}" />
+		<property name="listMusicStr">
+			<list>
+				<value>a</value>
+				<value>b</value>
+			</list>
+		</property>
+		<property name="listMusic">
+			<list>
+				<ref bean="musicBean" />
+				<ref bean="musicBean2" />
+			</list>
+		</property>
+		
     </bean>
 </beans>

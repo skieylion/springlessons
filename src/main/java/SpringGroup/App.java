@@ -19,8 +19,12 @@ public class App
     	//ручное внедрение зависимости
     	//MusicPlayer mp=new MusicPlayer(mb);
     	MusicPlayer mp=context.getBean("musicPlayer",MusicPlayer.class);
+    	//MusicPlayer mp2=context.getBean("musicPlayer",MusicPlayer.class);
     	mp.playMusic();
-    	
+    	mp.getListMusic();
+    	//System.out.println(mp==mp2);
+    	System.out.println(mp);
+    	//System.out.println(mp2);
         //System.out.println(tb.getSong());
         
         context.close();
