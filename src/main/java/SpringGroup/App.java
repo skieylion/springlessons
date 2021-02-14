@@ -23,7 +23,7 @@ public class App
     	mp.playMusic();
     	mp.getListMusic();
     	//System.out.println(mp==mp2);
-    	System.out.println(mp);
+    	//System.out.println(mp);
     	//System.out.println(mp2);
         //System.out.println(tb.getSong());
         

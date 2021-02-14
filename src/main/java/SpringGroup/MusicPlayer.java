@@ -2,8 +2,13 @@ package SpringGroup;
 
 import java.util.List;
 
-import com.sun.corba.se.spi.orbutil.fsm.Action;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
 
+
+@Component
 public class MusicPlayer {
 	
 	private List<String> listMusicStr;
@@ -29,7 +34,8 @@ public class MusicPlayer {
 		System.out.println("get list: "+listMusic);
 		return listMusic;
 	}
-
+	
+	@Autowired
 	public void setListMusic(List<Music> listMusic) {
 		System.out.println("set list: "+listMusic);
 		this.listMusic = listMusic;
@@ -41,7 +47,8 @@ public class MusicPlayer {
 	public Integer getVolume() {
 		return volume;
 	}
-
+	
+	@Value("${musicPlayer.volume}")
 	public void setVolume(Integer volume) {
 		this.volume = volume;
 	}
@@ -49,7 +56,8 @@ public class MusicPlayer {
 	public String getName() {
 		return name;
 	}
-
+	
+	@Value("${musicPlayer.name}")
 	public void setName(String name) {
 		this.name = name;
 	}
@@ -60,7 +68,8 @@ public class MusicPlayer {
 	public Music getMusic() {
 		return music;
 	}
-
+	@Autowired
+	@Qualifier("musicBean")
 	public void setMusic(Music music) {
 		this.music = music;
 	}
