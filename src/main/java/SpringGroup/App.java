@@ -30,7 +30,8 @@ public class App
         context.close();
         
         /*
-         * ƒз сделать бин прототип и убедитьс€ что не вызываетс€ дестрой метод
+         * —ледующий урок 11 посмотреть, сделать задание из этого урока
+         * https://youtu.be/pDTzRsuGrDU?list=PLAma_mKffTOR5o0WNHnY0mTjKxnCgSXrZ
          * */
         
     }
