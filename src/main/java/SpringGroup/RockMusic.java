@@ -3,11 +3,13 @@ package SpringGroup;
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
 
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 
 
-@Component("musicBean")
+@Component
+@Scope("prototype")
 public class RockMusic implements Music {
 	
 	//private RockMusic() {}
@@ -31,6 +33,9 @@ public class RockMusic implements Music {
 	@Override
 	public String getSong() {
 		// TODO Auto-generated method stub
+		System.out.println("Song Rock 1");
+		System.out.println("Song Rock 2");
+		System.out.println("Song Rock 3");
 		return "Nirvana";
 	}
 

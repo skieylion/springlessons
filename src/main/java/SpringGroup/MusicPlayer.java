@@ -1,6 +1,7 @@
 package SpringGroup;
 
 import java.util.List;
+import java.util.Random;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -10,6 +11,8 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class MusicPlayer {
+	
+	public static enum KIND {CLASSICAL,ROCK}
 	
 	private List<String> listMusicStr;
 	
@@ -40,8 +43,16 @@ public class MusicPlayer {
 		System.out.println("set list: "+listMusic);
 		this.listMusic = listMusic;
 	}
-
+	
+	@Autowired
+	@Qualifier("musicBean")
+	private Music musicRock;
+	@Autowired
+	@Qualifier("musicBean2")
+	private Music musicClassical;
+	
 	private Music music;
+	
 	private Integer volume;
 	
 	public Integer getVolume() {
@@ -81,9 +92,24 @@ public class MusicPlayer {
 	public MusicPlayer() {
 	}
 	
-	public void playMusic() {
-		System.out.println(music.getSong());
-		System.out.println(getName());
-		System.out.println(getVolume());
+	public void playMusic(KIND k) {
+		
+		Random r=new Random();
+		Boolean b=r.nextBoolean();
+		
+		if(k==KIND.ROCK) {
+			if(b==true) {
+				System.out.println(musicRock.getSong()+" Hello");
+			}
+			else {
+				System.out.println(musicRock.getSong()+" Bye bye");
+			}
+		}
+		else if(k==KIND.CLASSICAL) {
+			System.out.println(musicClassical.getSong());
+		}
+		//System.out.println(music.getSong());
+		//System.out.println(getName());
+		//System.out.println(getVolume());
 	}
 }
