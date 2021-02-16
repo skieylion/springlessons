@@ -8,8 +8,8 @@ import org.springframework.stereotype.Component;
 
 
 
-@Component
-@Scope("prototype")
+//@Component
+//@Scope("prototype")
 public class RockMusic implements Music {
 	
 	//private RockMusic() {}
@@ -21,21 +21,17 @@ public class RockMusic implements Music {
 		return new RockMusic();
 	}
 	
-	@PostConstruct
+	//@PostConstruct
 	public void doMyInit() {
 		System.out.println("Start Rock");
 	}
-	@PreDestroy
+	//@PreDestroy
 	public void doMyDestroy() {
 		System.out.println("End Rock");
 	}
 	
 	@Override
 	public String getSong() {
-		// TODO Auto-generated method stub
-		System.out.println("Song Rock 1");
-		System.out.println("Song Rock 2");
-		System.out.println("Song Rock 3");
 		return "Nirvana";
 	}
 

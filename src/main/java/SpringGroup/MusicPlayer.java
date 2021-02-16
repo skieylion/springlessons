@@ -9,9 +9,22 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 
-@Component
+//@Component
 public class MusicPlayer {
 	
+	List<Music> listMusic;
+	
+	MusicPlayer(List<Music> list){
+		this.listMusic=list;
+	}
+	
+	public void playMusic() {
+		Random r=new Random();
+		Integer index=r.nextInt(listMusic.size());
+		System.out.println(listMusic.get(index).getSong());
+	}
+	
+	/*
 	public static enum KIND {CLASSICAL,ROCK}
 	
 	private List<String> listMusicStr;
@@ -112,4 +125,5 @@ public class MusicPlayer {
 		//System.out.println(getName());
 		//System.out.println(getVolume());
 	}
+	*/
 }

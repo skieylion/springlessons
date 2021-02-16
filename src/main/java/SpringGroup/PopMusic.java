@@ -2,7 +2,7 @@ package SpringGroup;
 
 import org.springframework.stereotype.Component;
 
-@Component("popMusic")
+//@Component("popMusic")
 public class PopMusic implements Music {
 
 	@Override
