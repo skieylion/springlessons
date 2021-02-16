@@ -37,8 +37,6 @@ public class App
         
         /*
          * 
-         * дз на следующий урок
-         * https://youtu.be/stuAmyyootQ?list=PLAma_mKffTOR5o0WNHnY0mTjKxnCgSXrZ&t=927
          *УРОКИ спринг бут
          *https://youtu.be/jH17YkBTpI4?list=PLU2ftbIeotGpAYRP9Iv2KLIwK36-o_qYk
          *
